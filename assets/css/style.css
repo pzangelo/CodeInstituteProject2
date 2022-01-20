@@ -3,6 +3,7 @@
 *,*::before, *::after {
     box-sizing: border-box;
     font-family: 'PT Serif', serif;
+    font-size: 110%;
 }
 
 :root{
@@ -37,4 +38,48 @@ body.wrong {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0 15px 5px;
+}
+
+.button-grid {
+    display:grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.butn {
+    background-color: lightblue;
+    border: 5px solid darkblue;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: black;
+    outline: none;
+}
+
+.butn:hover {
+    border-color: maroon;
+}
+
+.butn.correct {
+    --hue:var(--hue-correct);
+}
+
+.butn.wrong {
+    --hue:var(--hue-wrong);
+}
+
+.start-butn, .next-butn {
+    font-size: 130%;
+    font-weight: bold;
+    padding:10px 20px;
+}
+
+.control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
 }
