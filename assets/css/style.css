@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap');
 
+*,*::before, *::after {
+    box-sizing: border-box;
+    font-family: 'PT Serif', serif;
+}
+
 :root{
     --hue-neutral: blue;
     --hue-wrong:red;
@@ -15,4 +20,21 @@ body {
     width: 100vw;
     height: 100vh;
     background-color: var(--hue-neutral);
+}
+
+body.correct {
+    --hue:var(--hue-correct);
+}
+
+body.wrong {
+    --hue:var(--hue-wrong);
+}
+
+.container {
+    width: 800px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px 5px;
 }
